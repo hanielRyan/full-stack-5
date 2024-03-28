@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hoodies Market</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Style+Script&display=swap');
+
+:root{
+    --main-font:"Roboto", sans-serif;
+    --another-font:"Style Script", cursive;
+    --text-font:"Raleway", sans-serif;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.logo{
+    font-family: var(--main-font);
+}
+
+.fa-bars{
+    color:#239b7e;
+    font-size:33px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+}
+
+header{
+    height:90vh;
+    display:grid;
+   grid-template-columns:1fr 1fr;
+   padding:0 10px;
+   place-items:center;
+}
+
+.cocktail{
+    color:rgb(167, 166, 166);
+    font-size:60px;
+    font-family:var(--another-font);
+    line-height:50px;
+}
+
+.hoodies{
+    font-family:var(--main-font);
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.paragraph{
+font-family:var(--text-font);
+max-width:500px;
+line-height:30px;
+}
+
+.b-container{
+    display:flex;
+    align-items:center;
+    margin-top:10px;
+}
+
+.button{
+    outline:none;
+    padding:10px 16px;
+    font-size:18px;
+    font-family: var(--main-font);
+}
+
+.shop{
+    color:white;
+    border:2px solid  transparent;
+    background-color:#239b7e;
+    cursor:pointer;
+    transition:all 0.5s;
+    margin-right:6px;
+}
+
+.shop:hover{
+    color:#239b7e;
+    background-color:white;
+    border:2px solid #239b7e;
+}
+
+.off{
+    color:#239b7e;
+    background-color:transparent;
+    border:2px solid #239b7e;
+    transition: all 0.5s;
+    margin-right:6px;
+}
+
+.off:hover{
+    color:white;
+    border:2px solid transparent;
+    background-color:#239b7e;
+}
+.main-img{
+    height:400px;
+    width:400px;
+    border-radius:100%;
+   box-shadow:2px 9px 3px 2px #bcbaba;
+}
+.center{
+align-self: center;
+}
+
+.section-one{
+    display:grid;
+    height:90vh;
+    grid-template-columns: repeat(2,1fr);
+    padding:50px;
+}
+
+.products{
+    display:grid;
+    place-items:center;
+    gap:10px;
+    height:150px;
+    margin-bottom:10px;
+}
+
+.heading{
+    font-family: var(--another-font);
+    font-size:50px;
+    text-align: center;
+}
+
+.main{
+    display:flex;
+    flex-wrap:wrap;
+    margin:30px 30px;
+    align-items: center;
+    justify-content:center;
+    width:60vw;
+}
+
+.container{
+    width:210px;
+    height:fit-content;
+    padding-bottom:5px;
+    margin:20px;
+}
+
+.img-container{
+    display:flex;
+    justify-content: center;
+    background-color:#ebf1f0;
+    align-items:center;
+    padding:40px;
+    margin-bottom:10px;
+}
+
+.product-img{
+    height:200px;
+    width:inherit;
+}
+
+.name-tag{
+    font-family:var(--text-font);
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.price-tag{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.link-tag{
+    color:#239b7e;
+    font-family:var(--main-font);
+    font-size:20px;
+}
+
+.main-container{
+    height:fit-content;
+    display:grid;
+    place-items:center;
+    margin-bottom:200px;
+}
+
+.review-container{
+    display:flex;
+    margin:20px;
+    height:fit-content;
+    min-height:50vh;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: center;
+    padding:20px;
+}
+
+.review{
+  width:250px;
+  text-align:center;
+  padding:10px;
+  margin:0 100px;
+}
+
+.review-img{
+    width:200px;
+    height:200px;
+    border-radius:100%;
+}
+
+.review-name{
+    font-family: var(--another-font);
+    font-size:30px;
+    margin:10px 0;
+}
+
+.footer{
+    min-height:40vh;
+    background:black;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    flex-wrap:wrap;
+}
+
+.footer-review{
+    display:grid;
+    gap:10px;
+    padding:20px;
+    min-width:220px;
+}
+
+.footer-heading{
+    font-family: var(--main-font);
+}
+
+
+@media only screen and (max-width:768px){
+   
+     header{
+        grid-template-columns: 1fr;
+        gap:30px;
+        grid-template-rows:repeat(2,1fr);
+     }
+     .section-one{
+        gap:30px;
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(2,1fr);
+        margin-top:150px;
+        padding:10px;
+     }
+     .center{
+    display:grid;
+    place-items:center;
+}
+
+.products{
+    margin-top:150px;
+}
+
+}
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h2 class="logo">Logo</h2>
+            <i class="fa fa-bars"></i>
+        </nav>
+        <header>
+            <section class="center">
+            <h1 class="cocktail">New Cocktail</h1>
+            <br>
+            <h2 class="hoodies">Hoodies</h2>
+            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias mollitia, doloribus cupiditate natus accusamus esse nam illo animi cum asperiores aut fugit obcaecati dignissimos eum odit sit voluptatum soluta nulla?.</p>
+            <div class="b-container">
+                <button class="button shop">Shop Now</button>
+                <button class="button off">50% Off</button>
+            </div>
+        </section>
+        <section class="center">
+<img src="./images/web image.jpg" alt="" class="main-img">
+        </section>
+        </header>
+<section class="section-one">
+    <div class="center">
+        <img src="./images/web pic 2.jpg" alt="" class="main-img">
+    </div>
+    <div class="center">
+<h1 class="cocktail">Summer Sale</h1>
+<h1 class="hoodies">Offer</h1>
+<p class="paragraph" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam fuga aliquid necessitatibus totam excepturi! Dolorum perferendis quas inventore repudiandae corrupti.</p>
+<br>
+<button class="button shop">Learn More</button>
+    </div>
+</section>
+<section class="products">
+    <h1 class="heading">OUR PRODUCTS</h1>
+  <div class="b-container">
+    <button class="button off">NEW ARRIVALS</button>
+    <button class="button off">TOP RATINGS</button>
+    <button class="button off">BEST SELLER</button>
+  </div>
+</section>
+<section class="main-container">
+<main class="main">
+<div class="container">
+    <div class="img-container">
+<img src="./images/hoodie 1.png" alt="" class="product-img">
+</div>
+<h4 class="name-tag">Red Hoodie</h4>
+<p class="price-tag">$4.50</p>
+<a href="" class="link-tag">View Product</a>
+</div>
+<div class="container">
+    <div class="img-container">
+<img src="./images/hoodie 2.png" alt="" class="product-img">
+</div>
+<h4 class="name-tag">Red Hoodie</h4>
+<p class="price-tag">$4.50</p>
+<a href="" class="link-tag">View Product</a>
+</div>
+<div class="container">
+    <div class="img-container">
+<img src="./images/hoodie 3.png" alt="" class="product-img">
+</div>
+<h4 class="name-tag">Red Hoodie</h4>
+<p class="price-tag">$4.50</p>
+<a href="" class="link-tag">View Product</a>
+</div>
+<div class="container">
+    <div class="img-container">
+<img src="./images/hoodie 1.png" alt="" class="product-img">
+</div>
+<h4 class="name-tag">Red Hoodie</h4>
+<p class="price-tag">$4.50</p>
+<a href="" class="link-tag">View Product</a>
+</div>
+<div class="container">
+    <div class="img-container">
+<img src="./images/hoodie 2.png" alt="" class="product-img">
+</div>
+<h4 class="name-tag">Red Hoodie</h4>
+<p class="price-tag">$4.50</p>
+<a href="" class="link-tag">View Product</a>
+</div>
+<div class="container">
+    <div class="img-container">
+<img src="./images/hoodie 3.png" alt="" class="product-img">
+</div>
+<h4 class="name-tag">Red Hoodie</h4>
+<p class="price-tag">$4.50</p>
+<a href="" class="link-tag">View Product</a>
+</div>
+</main>
+</section>
+<h1 class="heading">OUR CLIENT SAYS</h1>
+<section class="review-container">
+<div class="review">
+    <div>
+        <img src="./images/review-1.jpg" alt="" class="review-img ">
+    </div>
+    <h4 class="review-name">Alex</h4>
+    <p class="paragraph"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus vero veniam ut odit ducimus doloremque!</p>
+</div>
+<div class="review">
+    <div>
+        <img src="./images/review-2.jpg" alt="" class="review-img ">
+    </div>
+    <h4 class="review-name">Anna</h4>
+    <p class="paragraph"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus vero veniam ut odit ducimus doloremque!</p>
+</div>
+<div class="review">
+    <div>
+        <img src="./images/review-3.jpg" alt="" class="review-img ">
+    </div>
+    <h4 class="review-name"> Ashish</h4>
+    <p class="paragraph"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus vero veniam ut odit ducimus doloremque!</p>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-review">
+    <h2 class="footer-heading">LOCATION</h2>
+    <p class="paragraph">near lulu</p>
+    <p class="paragraph" >near adcb bank</p>
+    <p class="paragraph">near nesto</p>
+</div>
+<div class="footer-review">
+    <h2 class="footer-heading">SOCIAL</h2>
+    <p class="paragraph">instagram</p>
+    <p class="paragraph" >facebook</p>
+    <p class="paragraph">discord</p>
+</div>
+<div class="footer-review">
+    <h2 class="footer-heading">WORK</h2>
+    <p class="paragraph">sell hoodies</p>
+    <p class="paragraph" >sell clothes</p>
+    <p class="paragraph">sell food</p>
+</div>
+</footer>
+    </body>
+</html>
